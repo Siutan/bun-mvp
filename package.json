@@ -3,12 +3,17 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile output/server ./src/index.ts"
   },
   "dependencies": {
+    "@elysiajs/static": "^1.2.0",
+    "better-auth": "^1.1.18",
+    "better-sqlite3": "^11.8.1",
     "elysia": "latest"
   },
   "devDependencies": {
+    "@playwright/test": "^1.50.1",
     "bun-types": "latest"
   },
   "module": "src/index.js"
